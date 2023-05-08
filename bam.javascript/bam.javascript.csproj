@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Javascript\json2.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Javascript\json2.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\bam.base\bam.base\bam.base.csproj" />
+    <ProjectReference Include="..\..\bam.data\bam.data\bam.data\bam.data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Breve\" />
+  </ItemGroup>
+
+</Project>
