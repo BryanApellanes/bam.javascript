@@ -22,7 +22,7 @@ namespace Bam.Net.Javascript.NodeJs
 
         public ProcessOutput Run(string nodeScriptPath)
         {
-            return "{0} {1}"._Format(NodePath, nodeScriptPath).Run();
+            return "{0} {1}".Format(NodePath, nodeScriptPath).Run();
         }
 	}
 }
