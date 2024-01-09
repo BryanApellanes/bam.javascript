@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Bam.Javascript
 {
-    public class JsLiteralSchemaManager : SchemaManager
+    public class JsLiteralSchemaManager : DaoSchemaManager
     {
         public void ProcessTables(dynamic rehydrated, List<dynamic> foreignKeys)
         {
@@ -33,7 +33,7 @@ namespace Bam.Javascript
             ProcessXrefs(this, rehydrated, foreignKeys);
         }
 
-        protected static void ProcessXrefs(SchemaManager manager, dynamic rehydrated, List<dynamic> foreignKeys)
+        protected static void ProcessXrefs(DaoSchemaManager manager, dynamic rehydrated, List<dynamic> foreignKeys)
         {
             if (rehydrated["xrefs"] != null)
             {

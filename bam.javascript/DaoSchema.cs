@@ -72,12 +72,12 @@ namespace Bam.Data.Schema
             return results;
         }
 
-        public static SchemaManagerResult GenerateAssembly(FileInfo dbJs, DirectoryInfo compileTo, DirectoryInfo tempSourceDir)
+        public static DaoSchemaManagerResult GenerateAssembly(FileInfo dbJs, DirectoryInfo compileTo, DirectoryInfo tempSourceDir)
         {
             JsLiteralSchemaManager schemaManager = GetSchemaManager();
 
             DirectoryInfo partialsDir = new DirectoryInfo(Path.Combine(dbJs.Directory.FullName, "DaoPartials"));
-            SchemaManagerResult schemaManagerResult = new SchemaManagerResult("Generator Not Run, invalid file extension", false);
+            DaoSchemaManagerResult schemaManagerResult = new DaoSchemaManagerResult("Generator Not Run, invalid file extension", false);
             if (dbJs.Extension.ToLowerInvariant().Equals(".js"))
             {
                 schemaManagerResult = GenerateDaoAssembly(schemaManager, dbJs, compileTo, tempSourceDir, partialsDir);
@@ -93,13 +93,13 @@ namespace Bam.Data.Schema
 
         // TOOD: extract the generator functionality and move to DaoSchema
 
-        public static SchemaManagerResult GenerateDaoAssembly(JsLiteralSchemaManager schemaManager, FileInfo databaseDotJs, DirectoryInfo compileTo, DirectoryInfo temp, DirectoryInfo partialsDir)
+        public static DaoSchemaManagerResult GenerateDaoAssembly(JsLiteralSchemaManager schemaManager, FileInfo databaseDotJs, DirectoryInfo compileTo, DirectoryInfo temp, DirectoryInfo partialsDir)
         {
             string databaseSchemaJson = databaseDotJs.JsonFromJsLiteralFile("database");
             return GenerateDaoAssembly(schemaManager, databaseSchemaJson, compileTo, false, temp.FullName, partialsDir.FullName);
         }
 
-        public static SchemaManagerResult GenerateDaoAssembly(JsLiteralSchemaManager schemaManager, string simpleSchemaJson, DirectoryInfo compileTo, DirectoryInfo temp)
+        public static DaoSchemaManagerResult GenerateDaoAssembly(JsLiteralSchemaManager schemaManager, string simpleSchemaJson, DirectoryInfo compileTo, DirectoryInfo temp)
         {
             return GenerateDaoAssembly(schemaManager, simpleSchemaJson, compileTo, false, temp.FullName);
         }
@@ -109,12 +109,12 @@ namespace Bam.Data.Schema
         /// </summary>
         /// <param name="simpleSchemaJson"></param>
         /// <returns></returns>
-        public static SchemaManagerResult GenerateDaoAssembly(JsLiteralSchemaManager schemaManager, string simpleSchemaJson, DirectoryInfo compileTo = null, bool keepSource = false, string tempDir = "./tmp", string partialsDir = null)
+        public static DaoSchemaManagerResult GenerateDaoAssembly(JsLiteralSchemaManager schemaManager, string simpleSchemaJson, DirectoryInfo compileTo = null, bool keepSource = false, string tempDir = "./tmp", string partialsDir = null)
         {
             try
             {
                 bool compile = compileTo != null;
-                SchemaManagerResult managerResult = new SchemaManagerResult("Generation completed");
+                DaoSchemaManagerResult managerResult = new DaoSchemaManagerResult("Generation completed");
                 dynamic rehydrated = JsonConvert.DeserializeObject<dynamic>(simpleSchemaJson);
                 if (rehydrated["nameSpace"] == null)// || rehydrated["schemaName"] == null)
                 {
@@ -161,7 +161,7 @@ namespace Bam.Data.Schema
             }
             catch (Exception ex)
             {
-                SchemaManagerResult r = new SchemaManagerResult(ex.Message)
+                DaoSchemaManagerResult r = new DaoSchemaManagerResult(ex.Message)
                 {
                     StackTrace = ex.StackTrace ?? "",
                     Success = false
@@ -170,7 +170,7 @@ namespace Bam.Data.Schema
             }
         }
 
-        private static DaoGenerator GetDaoGenerator(DirectoryInfo compileTo, bool keepSource, string partialsDir, bool compile, SchemaManagerResult managerResult, string nameSpace, DirectoryInfo daoDir)
+        private static DaoGenerator GetDaoGenerator(DirectoryInfo compileTo, bool keepSource, string partialsDir, bool compile, DaoSchemaManagerResult managerResult, string nameSpace, DirectoryInfo daoDir)
         {
             Args.ThrowIfNull(DaoCodeWriter, "DaoCodeWriter");
 
