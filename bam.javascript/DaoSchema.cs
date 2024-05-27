@@ -1,9 +1,9 @@
 ﻿using Bam.Javascript;
-using Bam.Net;
-using Bam.Net.Data;
-using Bam.Net.Data.Schema;
-using Bam.Net.Javascript;
-//using Bam.Net.Javascript;
+using Bam;
+using Bam.Data;
+using Bam.Data.Schema;
+using Bam.Javascript;
+//using Bam.Javascript;
 using Newtonsoft.Json;
 using System;
 using System.CodeDom.Compiler;

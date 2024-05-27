@@ -5,12 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Bam.Net.Incubation;
+using Bam.Incubation;
 using EcmaScript.NET.Types;
 using EcmaScript.NET.Types.Cli;
 using EcmaScript.NET;
 
-namespace Bam.Net.Javascript
+namespace Bam.Javascript
 {
     public class JsContext
     {

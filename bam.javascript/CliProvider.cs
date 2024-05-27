@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Bam.Net.Javascript
+namespace Bam.Javascript
 {
     public class CliProvider
     {

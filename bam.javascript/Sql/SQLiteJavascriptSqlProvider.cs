@@ -6,11 +6,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Bam.Net.Data;
-using Bam.Net.Data.SQLite;
-using Bam.Net.Configuration;
+using Bam.Data;
+using Bam.Data.SQLite;
+using Bam.Configuration;
 
-namespace Bam.Net.Javascript.Sql
+namespace Bam.Javascript.Sql
 {
 	public class SQLiteJavaScriptSqlProvider: JavaScriptSqlProvider
 	{

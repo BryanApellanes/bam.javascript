@@ -1,5 +1,5 @@
-﻿using Bam.Net;
-using Bam.Net.Data.Schema;
+﻿using Bam;
+using Bam.Data.Schema;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -8,7 +8,7 @@ using System.Text;
 using System.Reflection;
 using System.IO;
 
-namespace Bam.Net.Javascript
+namespace Bam.Javascript
 {
     public class ResourceScripts
     {
@@ -22,7 +22,7 @@ namespace Bam.Net.Javascript
         }
 
         /// <summary>
-        /// Loads embedded resouce scripts that are in the namespace path Bam.Net.Javascript
+        /// Loads embedded resouce scripts that are in the namespace path Bam.Javascript
         /// </summary>
         public static void LoadScripts()
         {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bam.Net.Javascript
+namespace Bam.Javascript
 {
     public class MinifyResult
     {

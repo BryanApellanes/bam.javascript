@@ -6,10 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Bam.Net;
-using Bam.Net.CommandLine;
+using Bam;
+using Bam.CommandLine;
 
-namespace Bam.Net.Javascript.NodeJs
+namespace Bam.Javascript.NodeJs
 {
 	public class NodeScriptRunner
 	{

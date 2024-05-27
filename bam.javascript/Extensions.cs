@@ -12,7 +12,7 @@ using System.Web;
 using Yahoo.Yui.Compressor;
 using System.Threading.Tasks;
 
-namespace Bam.Net.Javascript
+namespace Bam.Javascript
 {
     public static class Extensions
     {
@@ -81,7 +81,7 @@ namespace Bam.Net.Javascript
         /// <returns></returns>
         public static string JsonFromJsLiteralFile(this FileInfo jsLiteralFile, string objName)
         {
-            string json = Bam.Net.Javascript.ResourceScripts.Get("json2.js");
+            string json = Bam.Javascript.ResourceScripts.Get("json2.js");
             string database = File.ReadAllText(jsLiteralFile.FullName);
             string command = string.Format("\r\n;var objJson = JSON.stringify({0});", objName);
 

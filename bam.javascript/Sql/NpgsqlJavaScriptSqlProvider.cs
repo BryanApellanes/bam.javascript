@@ -1,4 +1,4 @@
-namespace Bam.Net.Javascript.Sql
+namespace Bam.Javascript.Sql
 {
     public class NpgsqlJavaScriptSqlProvider : JavaScriptSqlProvider 
     {

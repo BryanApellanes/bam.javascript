@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bam.Net.Javascript.Sql
+namespace Bam.Javascript.Sql
 {
 	public class SqlResponse
 	{
