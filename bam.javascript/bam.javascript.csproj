@@ -18,4 +18,8 @@
     <ProjectReference Include="..\..\bam.data\bam.data\bam.data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="DaoSchema.cs" />
+  </ItemGroup>
+
 </Project>
