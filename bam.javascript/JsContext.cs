@@ -1,12 +1,8 @@
 /*
 	Copyright © Bryan Apellanes 2015  
 */
-using System;
-using System.Collections.Generic;
-using System.Linq;
+
 using System.Text;
-using Bam.Incubation;
-using EcmaScript.NET.Types;
 using EcmaScript.NET.Types.Cli;
 using EcmaScript.NET;
 
