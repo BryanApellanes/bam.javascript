@@ -18,7 +18,7 @@ namespace Bam.Javascript
 		{
 			get;
 			set;
-		}
+		} = null!;
 
 		bool _initialized;
 		public void EnsureInitialized()

@@ -64,11 +64,11 @@ namespace Bam.Javascript
                     if (fullScriptPath.StartsWith(namespacePath) && fullScriptPath.EndsWith(".js"))
                     {
                         string scriptName = fullScriptPath.Substring(namespacePath.Length, fullScriptPath.Length - namespacePath.Length);
-                        Stream resource = assembly.GetManifestResourceStream(fullScriptPath);
-                        using (StreamReader script = new StreamReader(resource))
+                        Stream resource = assembly.GetManifestResourceStream(fullScriptPath)!;
+                        using (StreamReader script = new StreamReader(resource!))
                         {
                             string js = script.ReadToEnd();
-                            scripts.AddMissing(scriptName, js);
+                            scripts.TryAdd(scriptName, js);
                         }
                     }
                 }

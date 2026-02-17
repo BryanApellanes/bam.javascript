@@ -86,7 +86,7 @@ namespace Bam.Javascript
 
         public static dynamic JsonToDynamic(this string json)
         {
-            return JsonConvert.DeserializeObject<dynamic>(json);
+            return JsonConvert.DeserializeObject<dynamic>(json)!;
         }
     }
 }

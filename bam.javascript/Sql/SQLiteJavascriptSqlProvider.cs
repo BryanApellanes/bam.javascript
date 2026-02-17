@@ -10,8 +10,8 @@ namespace Bam.Javascript.Sql
 	{
 		public SQLiteJavaScriptSqlProvider() { }
 
-		public string SQLiteDirectoryPath { get; set; }
-		public string SQLiteFileName { get; set; }
+		public string SQLiteDirectoryPath { get; set; } = null!;
+		public string SQLiteFileName { get; set; } = null!;
 
 		protected override void Initialize()
 		{

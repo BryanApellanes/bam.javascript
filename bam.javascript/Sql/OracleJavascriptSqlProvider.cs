@@ -13,11 +13,11 @@ namespace Bam.Javascript.Sql
 		{
 		}
 
-		public string OracleUserId { get; set; }
-		public string OraclePassword { get; set; }
-		public string OracleServerName { get; set; }
-		public string OraclePort { get; set; }
-		public string OracleInstanceName { get; set; }
+		public string OracleUserId { get; set; } = null!;
+		public string OraclePassword { get; set; } = null!;
+		public string OracleServerName { get; set; } = null!;
+		public string OraclePort { get; set; } = null!;
+		public string OracleInstanceName { get; set; } = null!;
 
 		protected override void Initialize()
 		{

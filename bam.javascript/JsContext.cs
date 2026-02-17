@@ -10,9 +10,9 @@ namespace Bam.Javascript
 {
     public class JsContext
     {
-        Context _context;
-        ScriptableObject _scope;
-        StringBuilder _loaded;
+        Context _context = null!;
+        ScriptableObject _scope = null!;
+        StringBuilder _loaded = null!;
 
         public JsContext()
         {

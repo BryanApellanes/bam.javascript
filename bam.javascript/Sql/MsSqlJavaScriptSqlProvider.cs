@@ -12,10 +12,10 @@ namespace Bam.Javascript.Sql
 		{
 		}
 
-		public string MsSqlUserId { get; set; }
-		public string MsSqlPassword { get; set; }
-		public string MsSqlServerName { get; set; }
-		public string MsSqlDatabaseName { get; set; }
+		public string MsSqlUserId { get; set; } = null!;
+		public string MsSqlPassword { get; set; } = null!;
+		public string MsSqlServerName { get; set; } = null!;
+		public string MsSqlDatabaseName { get; set; } = null!;
 
 		protected override void Initialize()
 		{

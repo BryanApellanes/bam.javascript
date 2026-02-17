@@ -30,6 +30,6 @@ namespace Bam.Javascript
         {
             get;
             set;
-        }
+        } = null!;
     }
 }

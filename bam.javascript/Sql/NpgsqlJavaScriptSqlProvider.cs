@@ -7,6 +7,6 @@ namespace Bam.Javascript.Sql
             throw new System.NotImplementedException();
         }
 
-        public override string[] RequiredProperties { get; }
+        public override string[] RequiredProperties { get; } = null!;
     }
 }

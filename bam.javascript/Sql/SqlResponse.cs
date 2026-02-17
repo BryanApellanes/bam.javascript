@@ -9,8 +9,8 @@ namespace Bam.Javascript.Sql
 		public SqlResponse() { }
 		public int Count { get; set; }
 		public bool Success { get; set; }
-		public string Message { get; set; }
+		public string Message { get; set; } = null!;
 
-		public object[] Results { get; set; }
+		public object[] Results { get; set; } = null!;
 	}
 }
